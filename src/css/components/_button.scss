@@ -29,7 +29,7 @@
     }
   }
   &_inner {
-    background-color: rgba(238, 238, 238, 0.8);
+    background-color: rgba(247, 232, 246, 0.8);
     width: 240px;
     height: 50px;
     border-radius: 5px;
@@ -57,9 +57,9 @@
   top: 363px;
   width: 320px;
   border-color: $primary;
-}
-#left-btn-outer:hover {
-  border-color: $secondary;
+  &:hover {
+    border-color: $secondary;
+  }
 }
 
 #linkedin {
@@ -74,6 +74,11 @@
   &:active {
     transform: translate(115px, -1px);
   }
+  animation-name: linkedin;
+  animation-duration: 0.5s;
+  animation-delay: 0.5s;
+  animation-fill-mode: backwards;
+  animation-timing-function: ease-in-out;
 }
 #github {
   transform: translateX(-115px);
@@ -87,6 +92,11 @@
   &:active {
     transform: translate(-115px, -1px);
   }
+  animation-name: github;
+  animation-duration: 0.5s;
+  animation-delay: 0.25s;
+  animation-fill-mode: backwards;
+  animation-timing-function: ease-in-out;
 }
 #resume {
   transform: translateX(-330px);
@@ -100,6 +110,10 @@
   &:active {
     transform: translate(-330px, -1px);
   }
+  animation-name: resume;
+  animation-duration: 0.5s;
+  animation-fill-mode: backwards;
+  animation-timing-function: ease-in-out;
 }
 
 #handshake {
@@ -114,48 +128,56 @@
   &:active {
     transform: translate(330px, -1px);
   }
+  animation-name: handshake;
+  animation-duration: 0.5s;
+  animation-delay: 0.75s;
+  animation-fill-mode: backwards;
+  animation-timing-function: ease-in-out;
 }
-
-// button {
-//   all: unset;
-// }
-
-// .btn-border {
-//   max-width: 20rem;
-//   border: 15px solid cyan;
-//   border-radius: 10px;
-//   padding: 10px;
-//   transition: 0.5s;
-// }
-
-// .btn-border:hover {
-//   border: 15px solid blue;
-//   cursor: pointer;
-//   box-shadow: 0px 15px 10px rgba(30, 30, 30, 0.5);
-//   & .btn {
-//     background-color: blue;
-//     color: cyan;
-//     box-shadow: 0px 15px 50px rgba(30, 30, 30, 0.3);
-//   }
-// }
-
-// .btn-border:active {
-//   box-shadow: 0px 5px 10px rgba(30, 30, 30, 0.5);
-// }
-
-// button {
-//   box-sizing: border-box;
-//   &.btn {
-//     width: 100%;
-//     text-align: center;
-//     color: blue;
-//     background-color: cyan;
-//     border-radius: 10px;
-//     padding: 15px 25px;
-//     font-family: "Roboto Mono", monospace;
-//     font-weight: bold;
-//     font-size: 1.3rem;
-//     letter-spacing: 0.1rem;
-//     margin: 0 auto;
-//   }
-// }
+@keyframes resume {
+  0% {
+    transform: translate(-330px, 100px);
+    opacity: 0;
+  }
+  80% {
+    transform: translate(-330px, 10px);
+  }
+  100% {
+    transform: translate(-330px, 0);
+  }
+}
+@keyframes github {
+  0% {
+    transform: translate(-115px, 100px);
+    opacity: 0;
+  }
+  80% {
+    transform: translate(-115px, 10px);
+  }
+  100% {
+    transform: translate(-115px, 0);
+  }
+}
+@keyframes linkedin {
+  0% {
+    transform: translate(115px, 100px);
+    opacity: 0;
+  }
+  80% {
+    transform: translate(115px, 10px);
+  }
+  100% {
+    transform: translate(115px, 0);
+  }
+}
+@keyframes handshake {
+  0% {
+    transform: translate(330px, 100px);
+    opacity: 0;
+  }
+  80% {
+  }
+  100% {
+    transform: translate(330px, 0);
+  }
+}
