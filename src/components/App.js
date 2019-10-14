@@ -1,9 +1,9 @@
 import React from "react";
-import Button from "./Button";
+import Picture from "./Picture";
 const App = () => {
   return (
     <div>
-      <Button />
+      <Picture />
     </div>
   );
 };
