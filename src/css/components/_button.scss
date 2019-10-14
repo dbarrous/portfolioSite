@@ -21,10 +21,11 @@
     &:hover {
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
       border: 5px solid $primary;
-      transform: translateY(-5);
+      transform: translateY(-5px);
     }
     &:active {
       box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);
+      transform: translateY(-1px);
     }
   }
   &_inner {
@@ -59,6 +60,60 @@
 }
 #left-btn-outer:hover {
   border-color: $secondary;
+}
+
+#linkedin {
+  transform: translateX(115px);
+  width: 180px;
+  &-inner {
+    width: 170px;
+  }
+  &:hover {
+    transform: translate(115px, -5px);
+  }
+  &:active {
+    transform: translate(115px, -1px);
+  }
+}
+#github {
+  transform: translateX(-115px);
+  width: 180px;
+  &-inner {
+    width: 170px;
+  }
+  &:hover {
+    transform: translate(-115px, -5px);
+  }
+  &:active {
+    transform: translate(-115px, -1px);
+  }
+}
+#resume {
+  transform: translateX(-330px);
+  width: 180px;
+  &-inner {
+    width: 170px;
+  }
+  &:hover {
+    transform: translate(-330px, -5px);
+  }
+  &:active {
+    transform: translate(-330px, -1px);
+  }
+}
+
+#handshake {
+  transform: translateX(330px);
+  width: 180px;
+  &-inner {
+    width: 170px;
+  }
+  &:hover {
+    transform: translate(330px, -5px);
+  }
+  &:active {
+    transform: translate(330px, -1px);
+  }
 }
 
 // button {

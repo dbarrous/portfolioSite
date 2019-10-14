@@ -7,4 +7,13 @@
 .topContainers {
   display: flex;
   justify-content: center;
+  height: 80vh;
+}
+
+.bottomContainers {
+  width: 100vw;
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
 }
