@@ -10,23 +10,25 @@
   box-sizing: border-box;
   cursor: pointer;
   &_border {
-    background-color: $secondary;
+    background: rgba(0, 0, 0, 0);
+    border: 5px solid $secondary;
     width: 250px;
     height: 60px;
 
     border-radius: 10px;
     position: absolute;
-    transition: 0.2s;
+    transition: 0.4s;
     &:hover {
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-      background-color: $primary;
+      border: 5px solid $primary;
+      transform: translateY(-5);
     }
     &:active {
       box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);
     }
   }
   &_inner {
-    background-color: $background;
+    background-color: rgba(238, 238, 238, 0.8);
     width: 240px;
     height: 50px;
     border-radius: 5px;
@@ -37,10 +39,28 @@
     font-family: "Roboto Mono", monospace;
     font-weight: bold;
     font-size: 1.3rem;
-    transition: 0.2;
+    transition: 0.4s;
     color: $accent;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+  }
+  &_inner:hover {
+    background-color: rgba(238, 238, 238, 0.9);
+    transform: translateY(-5);
   }
 }
+
+#left-btn-inner {
+  width: 310px;
+}
+#left-btn-outer {
+  top: 363px;
+  width: 320px;
+  border-color: $primary;
+}
+#left-btn-outer:hover {
+  border-color: $secondary;
+}
+
 // button {
 //   all: unset;
 // }

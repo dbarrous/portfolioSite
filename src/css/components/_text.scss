@@ -1,0 +1,87 @@
+@import "../var-mix/variables";
+@import "../var-mix/mixin";
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono:400,700&display=swap");
+
+.textBox {
+  background-color: $secondary;
+  height: 450px;
+  width: 450px;
+  border-bottom-right-radius: 10px;
+  color: #eee;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);
+}
+
+.textBox-center {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.main-heading {
+  &-top {
+    display: block;
+    font-family: "Roboto Mono", monospace;
+    font-size: 48px;
+    margin-top: 68px;
+    text-align: center;
+    margin-bottom: 24px;
+    animation: ComeIn 1s;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+  }
+  &-bottom {
+    display: block;
+    font-family: "Roboto Mono", monospace;
+    margin-bottom: 68px;
+    text-align: center;
+    font-size: 28px;
+    font-weight: normal;
+    animation-name: ComeIn;
+    animation-duration: 1s;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.secondary-heading {
+  color: $primary;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 28px;
+  letter-spacing: 2px;
+  text-align: center;
+  animation-name: Grow;
+  animation-duration: 1s;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+#name {
+  color: $accent;
+  font-weight: bold;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0);
+}
+
+@keyframes ComeIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+
+  80% {
+    opacity: 100;
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes Grow {
+  0% {
+    opacity: 0;
+    color: $accent;
+  }
+
+  100% {
+    opacity: 100;
+    color: $primary;
+  }
+}
