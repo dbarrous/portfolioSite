@@ -2,6 +2,7 @@ import React from "react";
 import Picture from "./Picture";
 import Text from "./Text";
 import Button from "./Button";
+import AboutMe from "./AboutMe";
 import "../css/components/_webpage.scss";
 const App = () => {
   return (
@@ -34,6 +35,9 @@ const App = () => {
           specialCssOuter="handshake"
           specialCssInner="handshake-inner"
         />
+      </div>
+      <div className="aboutMe">
+        <AboutMe />
       </div>
     </div>
   );

@@ -1,0 +1,53 @@
+@import "../var-mix/variables";
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono:400,700&display=swap");
+#aboutMeOuter {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0vh;
+  z-index: 9999;
+}
+
+#aboutMeInner {
+  width: 900px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $background;
+  border-radius: 10px;
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);
+}
+
+.aboutMeTitle {
+  font-family: "Roboto Mono", monospace;
+  font-size: 32px;
+  color: $accent;
+  padding: 10px;
+}
+
+.aboutMeParagraph {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  hyphens: auto;
+  padding: 10px;
+}
+
+.aboutMePic {
+  height: 100%;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+#About-Me {
+  opacity: 0;
+  visibility: hidden;
+  &:target {
+    visibility: visible;
+    opacity: 1;
+  }
+}
