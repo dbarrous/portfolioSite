@@ -27,20 +27,22 @@
   font-family: "Roboto Mono", monospace;
   font-size: 32px;
   color: $accent;
-  padding: 10px;
+  padding: 15px 25px;
 }
 
 .aboutMeParagraph {
+  text-indent: 20px;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
   hyphens: auto;
-  padding: 10px;
+  padding: 5px 25px;
+  color: #111111;
 }
 
 .aboutMePic {
   height: 100%;
-  border-bottom-left-radius: 10px;
-  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 #About-Me {
@@ -50,4 +52,15 @@
     visibility: visible;
     opacity: 1;
   }
+}
+
+#closeBtn {
+  width: 20px;
+  position: absolute;
+  top: 33.333px;
+  right: 105px;
+}
+
+#closeBtnImg {
+  width: 100%;
 }
