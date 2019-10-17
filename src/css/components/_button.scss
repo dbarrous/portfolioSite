@@ -12,7 +12,7 @@
   cursor: pointer;
   &_border {
     background: rgba(0, 0, 0, 0);
-    border: 5px solid $secondary;
+    border: 5px solid $accent;
     width: 250px;
     height: 60px;
 
@@ -21,7 +21,7 @@
     transition: 0.4s;
     &:hover {
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-      border: 5px solid $primary;
+      border: 5px solid $tertiary;
       transform: translateY(-5px);
     }
     &:active {
@@ -42,12 +42,12 @@
     font-weight: bold;
     font-size: 1.3rem;
     transition: 0.4s;
-    color: $accent;
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+    color: $primary;
   }
   &_inner:hover {
     background-color: rgba(238, 238, 238, 0.9);
     transform: translateY(-5);
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
   }
 }
 
@@ -57,10 +57,7 @@
 #left-btn-outer {
   top: 363px;
   width: 320px;
-  border-color: $primary;
-  &:hover {
-    border-color: $secondary;
-  }
+  color: $tertiary;
 }
 
 #linkedin {
@@ -77,7 +74,7 @@
   }
   animation-name: linkedin;
   animation-duration: 0.5s;
-  animation-delay: 0.5s;
+  animation-delay: 2.35s;
   animation-fill-mode: backwards;
   animation-timing-function: ease-in-out;
 }
@@ -95,7 +92,7 @@
   }
   animation-name: github;
   animation-duration: 0.5s;
-  animation-delay: 0.25s;
+  animation-delay: 2.1s;
   animation-fill-mode: backwards;
   animation-timing-function: ease-in-out;
 }
@@ -113,6 +110,7 @@
   }
   animation-name: resume;
   animation-duration: 0.5s;
+  animation-delay: 1.85s;
   animation-fill-mode: backwards;
   animation-timing-function: ease-in-out;
 }
@@ -131,7 +129,7 @@
   }
   animation-name: handshake;
   animation-duration: 0.5s;
-  animation-delay: 0.75s;
+  animation-delay: 2.6s;
   animation-fill-mode: backwards;
   animation-timing-function: ease-in-out;
 }
