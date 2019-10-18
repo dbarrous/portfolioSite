@@ -4,8 +4,8 @@
 
 .textBox {
   background-color: $primary;
-  height: 450px;
-  width: 450px;
+  height: 475px;
+  width: 475px;
   border-bottom-right-radius: 10px;
   color: $white;
   display: flex;
@@ -17,6 +17,8 @@
   width: 100%;
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .main-heading {
@@ -31,9 +33,6 @@
     overflow: hidden;
     letter-spacing: 0.1em;
     border-right: 0.15em solid $accent;
-    // animation: ComeIn 1s;
-    // animation-fill-mode: both;
-    // animation-timing-function: ease-in-out;
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
     animation: typing 2.5s steps(40, end), cursor 0.75s step-end infinite;
   }

@@ -10,7 +10,11 @@ const Picture = () => {
         alt="This is a Profile Picture of Myself"
       />
       <div className="buttonContainer">
-        <Button btnText="Who Am I?" hrefLink={"#About-Me"} />
+        <Button
+          btnText="Who Am I?"
+          hrefLink={"#About-Me"}
+          specialCss={"left-btn"}
+        />
       </div>
     </div>
   );

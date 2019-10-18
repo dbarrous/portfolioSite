@@ -3,18 +3,19 @@
   width: 100vw;
   height: 100vh;
   background-color: $background;
+  overflow: hidden;
 }
 .topContainers {
   display: flex;
   justify-content: center;
-  height: 80vh;
+  align-items: center;
+  height: 500px;
 }
 
 .bottomContainers {
   width: 100vw;
-  height: 17.5vh;
+  height: 250px;
   display: flex;
   justify-content: center;
   overflow: hidden;
-  padding-top: 10px;
 }

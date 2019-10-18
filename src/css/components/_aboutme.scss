@@ -6,27 +6,28 @@
   background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: top;
   position: absolute;
   bottom: 0vh;
   z-index: 9999;
 }
 
 #aboutMeInner {
-  width: 900px;
+  max-width: 900px;
   height: 500px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: $background;
-  border-radius: 10px;
+  background-color: $primary;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
   box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);
 }
 
 .aboutMeTitle {
   font-family: "Roboto Mono", monospace;
   font-size: 32px;
-  color: $accent;
+  color: $tertiary;
   padding: 15px 25px;
 }
 
@@ -36,7 +37,7 @@
   font-size: 16px;
   hyphens: auto;
   padding: 5px 25px;
-  color: $black;
+  color: $white;
 }
 
 .aboutMePic {
@@ -48,9 +49,14 @@
 #About-Me {
   opacity: 0;
   visibility: hidden;
+  transition: 0.8s;
+
   &:target {
     visibility: visible;
     opacity: 1;
+    animation-name: comeup;
+    animation-duration: 1.2s;
+    animation-timing-function: ease-in-out;
   }
 }
 
@@ -63,4 +69,13 @@
 
 #closeBtnImg {
   width: 100%;
+}
+
+@keyframes comeup {
+  0% {
+    transform: translateY(-1000px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }

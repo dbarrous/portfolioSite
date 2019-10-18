@@ -5,59 +5,85 @@
   margin: 0;
   padding: 0;
 }
+body,
+html {
+  height: 100%;
+}
 
 .btn {
+  //Small anchor reset
   text-decoration: none;
   box-sizing: border-box;
   cursor: pointer;
+
   &_border {
+    //Border Box Styles
+    height: 100%;
+    max-width: 15rem;
     background: rgba(0, 0, 0, 0);
     border: 3px solid $accent;
-    width: 250px;
-    height: 60px;
-
+    padding: 3px;
     border-radius: 10px;
-    position: absolute;
-    transition: 0.4s;
+    transition: 0.3s;
+
+    //Border Box Allignment
+    display: flex;
+    align-items: center;
+    justify-content: center;
     &:hover {
+      //Border Box Active Style
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
       border: 5px solid $tertiary;
       transform: translateY(-5px);
     }
     &:active {
+      //Border Box Clicked Style
       box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);
       transform: translateY(-1px);
     }
   }
   &_inner {
+    //Inner Box Styles
     background-color: rgba(247, 232, 246, 0.8);
-    width: 240px;
-    height: 50px;
+    width: 100%;
+    min-height: 100%;
     border-radius: 5px;
-    @include posCenter;
+    padding: 10px;
+
+    //Alignment
     display: flex;
+    text-align: center;
     justify-content: center;
     align-items: center;
+
+    //Font Styles
     font-family: "Roboto Mono", monospace;
     font-weight: bold;
     font-size: 1.3rem;
-    transition: 0.4s;
+    transition: 0.3s;
     color: $primary;
   }
   &_inner:hover {
+    //Inner Box Hover Styles
     background-color: rgba(238, 238, 238, 0.9);
     transform: translateY(-5);
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
   }
 }
 
-#left-btn-inner {
-  width: 310px;
+#empty-btn {
+  max-width: 40px;
+  max-height: 50px;
 }
-#left-btn-outer {
-  top: 363px;
-  width: 320px;
-  color: $tertiary;
+
+#right-btn {
+  height: 100px;
+  margin-top: 50px;
+}
+
+#left-btn {
+  height: 75px;
+  width: 200px;
 }
 
 #linkedin {

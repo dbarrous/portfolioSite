@@ -19,11 +19,7 @@ const Text = () => {
           <h2 className="secondary-heading">I'm a Web Developer</h2>
         </div>
 
-        <Button
-          btnText="What Have I Built?"
-          specialCssOuter="left-btn-outer"
-          specialCssInner="left-btn-inner"
-        />
+        <Button btnText="What Have I Built?" specialCss="right-btn" />
       </div>
     </div>
   );
