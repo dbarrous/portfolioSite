@@ -5,7 +5,7 @@ const AboutMe = () => {
     <div id="About-Me">
       <div id="aboutMeOuter">
         <div id="aboutMeInner">
-          <a id="closeBtn" href="#">
+          <a id="closeBtn" href="/">
             <img id="closeBtnImg" src="delete.svg" alt="Close Button" />
           </a>
 

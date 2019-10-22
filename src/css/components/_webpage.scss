@@ -1,21 +1,50 @@
 @import "../var-mix/variables";
+@import "../var-mix/mixin";
+
 .webpage {
   width: 100vw;
   height: 100vh;
   background-color: $background;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   overflow: hidden;
+  @include for-size(phone-only) {
+    overflow: scroll;
+    height: auto;
+    display: inline-block;
+  }
 }
 .topContainers {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 500px;
+  height: 75vh;
+  width: 100vw;
+  @include for-size(phone-only) {
+    height: 800px;
+    width: 100vw;
+    flex-direction: column-reverse;
+    overflow-x: hidden;
+  }
 }
 
 .bottomContainers {
-  width: 100vw;
-  height: 250px;
+  width: 90vw;
+  height: 24vh;
   display: flex;
-  justify-content: center;
-  overflow: hidden;
+  justify-content: space-around;
+  align-items: center;
+
+  @include for-size(desktop-up) {
+    width: 85vw;
+  }
+  @include for-size(phone-only) {
+    height: 500px;
+    width: 100vw;
+    flex-direction: column;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
 }

@@ -18,13 +18,16 @@ html {
 
   &_border {
     //Border Box Styles
-    height: 100%;
-    max-width: 15rem;
+    height: 75px;
+    width: 200px;
     background: rgba(0, 0, 0, 0);
     border: 3px solid $accent;
     padding: 3px;
     border-radius: 10px;
     transition: 0.3s;
+    @include for-size(phone-only) {
+      transform: translateY(-20px);
+    }
 
     //Border Box Allignment
     display: flex;
@@ -62,6 +65,9 @@ html {
     font-size: 1.3rem;
     transition: 0.3s;
     color: $primary;
+    @include for-size(phone-only) {
+      font-size: 1.5rem;
+    }
   }
   &_inner:hover {
     //Inner Box Hover Styles
@@ -84,20 +90,14 @@ html {
 #left-btn {
   height: 75px;
   width: 200px;
+  transform: translateY(-4vh);
 }
 
 #linkedin {
-  transform: translateX(115px);
-  width: 180px;
-  &-inner {
-    width: 170px;
+  @include for-size(phone-only) {
+    width: 300px;
   }
-  &:hover {
-    transform: translate(115px, -5px);
-  }
-  &:active {
-    transform: translate(115px, -1px);
-  }
+
   animation-name: linkedin;
   animation-duration: 0.5s;
   animation-delay: 2.35s;
@@ -105,17 +105,10 @@ html {
   animation-timing-function: ease-in-out;
 }
 #github {
-  transform: translateX(-115px);
-  width: 180px;
-  &-inner {
-    width: 170px;
+  @include for-size(phone-only) {
+    width: 300px;
   }
-  &:hover {
-    transform: translate(-115px, -5px);
-  }
-  &:active {
-    transform: translate(-115px, -1px);
-  }
+
   animation-name: github;
   animation-duration: 0.5s;
   animation-delay: 2.1s;
@@ -123,17 +116,10 @@ html {
   animation-timing-function: ease-in-out;
 }
 #resume {
-  transform: translateX(-330px);
-  width: 180px;
-  &-inner {
-    width: 170px;
+  @include for-size(phone-only) {
+    width: 300px;
   }
-  &:hover {
-    transform: translate(-330px, -5px);
-  }
-  &:active {
-    transform: translate(-330px, -1px);
-  }
+
   animation-name: resume;
   animation-duration: 0.5s;
   animation-delay: 1.85s;
@@ -142,17 +128,10 @@ html {
 }
 
 #handshake {
-  transform: translateX(330px);
-  width: 180px;
-  &-inner {
-    width: 170px;
+  @include for-size(phone-only) {
+    width: 300px;
   }
-  &:hover {
-    transform: translate(330px, -5px);
-  }
-  &:active {
-    transform: translate(330px, -1px);
-  }
+
   animation-name: handshake;
   animation-duration: 0.5s;
   animation-delay: 2.6s;
@@ -161,48 +140,49 @@ html {
 }
 @keyframes resume {
   0% {
-    transform: translate(-330px, 100px);
+    transform: translateY(100px);
     opacity: 0;
   }
   80% {
-    transform: translate(-330px, 10px);
+    transform: translateY(10px);
   }
   100% {
-    transform: translate(-330px, 0);
+    transform: translateY(0);
   }
 }
 @keyframes github {
   0% {
-    transform: translate(-115px, 100px);
+    transform: translateY(100px);
     opacity: 0;
   }
   80% {
-    transform: translate(-115px, 10px);
+    transform: translateY(10px);
   }
   100% {
-    transform: translate(-115px, 0);
+    transform: translateY(0);
   }
 }
 @keyframes linkedin {
   0% {
-    transform: translate(115px, 100px);
+    transform: translateY(100px);
     opacity: 0;
   }
   80% {
-    transform: translate(115px, 10px);
+    transform: translateY(10px);
   }
   100% {
-    transform: translate(115px, 0);
+    transform: translateY(0);
   }
 }
 @keyframes handshake {
   0% {
-    transform: translate(330px, 100px);
+    transform: translateY(100px);
     opacity: 0;
   }
   80% {
+    transform: translateY(10px);
   }
   100% {
-    transform: translate(330px, 0);
+    transform: translateY(0);
   }
 }

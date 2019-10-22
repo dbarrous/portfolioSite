@@ -20,9 +20,9 @@ const Button = props => {
     // </div>
 
     <a className="btn btn_border" href={hrefLink} id={emptyBtn + specialCss}>
-      <a className="btn btn_inner">
+      <div className="btn btn_inner">
         <p>{btnText}</p>
-      </a>
+      </div>
     </a>
   );
 };
