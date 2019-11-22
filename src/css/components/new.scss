@@ -1,0 +1,83 @@
+@import "../var-mix/variables.scss";
+@import url("https://fonts.googleapis.com/css?family=Roboto|VT323&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.body {
+  width: 100vw;
+  height: auto;
+  display: grid;
+  grid-template-columns: 35% 65%;
+  grid-auto-rows: 100vh;
+  background-color: $background;
+}
+
+.Column {
+  &Left {
+    width: 100%;
+    animation-name: slideIn;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+
+    img {
+      width: 100%;
+      height: auto;
+      border-bottom-right-radius: 80px;
+      padding-right: 10px;
+      padding-bottom: 10px;
+      border-right: 10px solid $primary;
+      border-bottom: 10px solid $primary;
+    }
+    .mainButtons {
+      display: flex;
+      justify-content: center;
+      margin: 25px;
+    }
+  }
+
+  &Right {
+    display: flex;
+    align-content: center;
+
+    flex-direction: column;
+
+    .description {
+      font-family: "VT323", monospace;
+      margin: 10%;
+      font-size: 28px;
+      color: $white;
+
+      .title {
+        margin-bottom: 10px;
+      }
+      .main {
+        color: $primary;
+        font-family: "Roboto", Arial, san-serif;
+        span {
+          display: block;
+        }
+      }
+    }
+
+    .buttons {
+      display: flex;
+      margin-left: 10%;
+      margin-right: 10%;
+    }
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100%);
+  }
+  80% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

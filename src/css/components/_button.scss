@@ -19,9 +19,10 @@ html {
   &_border {
     //Border Box Styles
     height: 75px;
+    margin-right: 20px;
     width: 200px;
     background: rgba(0, 0, 0, 0);
-    border: 3px solid $accent;
+    border: 3px solid $tertiary;
     padding: 3px;
     border-radius: 10px;
     transition: 0.3s;
@@ -36,7 +37,7 @@ html {
     &:hover {
       //Border Box Active Style
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-      border: 5px solid $tertiary;
+      border: 5px solid $accent;
       transform: translateY(-5px);
     }
     &:active {
@@ -47,7 +48,7 @@ html {
   }
   &_inner {
     //Inner Box Styles
-    background-color: rgba(247, 232, 246, 0.8);
+    background-color: rgba(0, 0, 0, 0.2);
     width: 100%;
     min-height: 100%;
     border-radius: 5px;
@@ -71,7 +72,7 @@ html {
   }
   &_inner:hover {
     //Inner Box Hover Styles
-    background-color: rgba(238, 238, 238, 0.9);
+    background-color: rgba(0, 0, 0, 0.05);
     transform: translateY(-5);
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
   }
@@ -82,15 +83,8 @@ html {
   max-height: 50px;
 }
 
-#right-btn {
-  height: 100px;
-  margin-top: 50px;
-}
-
-#left-btn {
-  height: 75px;
-  width: 200px;
-  transform: translateY(-4vh);
+.leftButtons {
+  border-color: $primary;
 }
 
 #linkedin {
@@ -100,7 +94,7 @@ html {
 
   animation-name: linkedin;
   animation-duration: 0.5s;
-  animation-delay: 2.35s;
+  animation-delay: 3.5s;
   animation-fill-mode: backwards;
   animation-timing-function: ease-in-out;
 }
@@ -111,7 +105,7 @@ html {
 
   animation-name: github;
   animation-duration: 0.5s;
-  animation-delay: 2.1s;
+  animation-delay: 3s;
   animation-fill-mode: backwards;
   animation-timing-function: ease-in-out;
 }
@@ -122,22 +116,11 @@ html {
 
   animation-name: resume;
   animation-duration: 0.5s;
-  animation-delay: 1.85s;
+  animation-delay: 2.5s;
   animation-fill-mode: backwards;
   animation-timing-function: ease-in-out;
 }
 
-#handshake {
-  @include for-size(phone-only) {
-    width: 300px;
-  }
-
-  animation-name: handshake;
-  animation-duration: 0.5s;
-  animation-delay: 2.6s;
-  animation-fill-mode: backwards;
-  animation-timing-function: ease-in-out;
-}
 @keyframes resume {
   0% {
     transform: translateY(100px);

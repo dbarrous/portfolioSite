@@ -15,6 +15,7 @@
   align-items: flex-end;
   border-bottom-left-radius: 10px;
   @include for-size(phone-only) {
+    background-position: top;
     height: 475px;
     border-bottom-right-radius: 10px;
     transform: translateY(-20px);
