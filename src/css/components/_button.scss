@@ -20,7 +20,7 @@ html {
     //Border Box Styles
     height: 75px;
     margin-right: 20px;
-    width: 200px;
+    width: 150px;
     background: rgba(0, 0, 0, 0);
     border: 3px solid $tertiary;
     padding: 3px;
@@ -85,6 +85,7 @@ html {
 
 .leftButtons {
   border-color: $primary;
+  width: 200px;
 }
 
 #linkedin {
